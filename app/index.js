@@ -3,22 +3,30 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const index = () => {
   return (
-    <View style={styles.container}>
-      <Text>index</Text>  
+    <View style={styles.page}>
+
+      <View>
+        <Text style={{ fontSize: 20, fontWeight: "800" }}>Your Name</Text>
+        <Text style={styles.subText}>Junior Mobile App Developer</Text>
+      </View>
     </View>
   )
 }
-
 export default index;
 
+
 const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  page: {
+    backgroundColor: "white",
+    flex: 1
+  },
+  subText:{
+    color:"green",
+    fontWeight:"light"
   }
-});
+
+
+})
 
 
 
