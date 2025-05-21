@@ -1,21 +1,17 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const index = () => {
   return (
     <View style={styles.page}>
 
-      <View style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-        <Image
-          source={require('../assets/images/icon.png')}
-          style={{ width: 100, height: 100, borderRadius: 50, }}
-        />
-        <TouchableOpacity style={{ backgroundColor: "green", width: 70, height: 28, }}>
-          <Text style={{ color: "white" }}>Click me</Text>
-        </TouchableOpacity>
+      <View style={styles.flexContainer}>
+        <View style={styles.box1}>
+          <Text>App</Text>
+        </View>
+
+        <View style={styles.box2}></View>
       </View>
-
-
 
     </View>
   )
@@ -29,9 +25,36 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   subText: {
-    color: "green",
-    fontWeight: "light"
+    color: "#fff",
+    fontWeight: "200",
   },
+  box1: {
+    height: 80,
+    width: 80,
+    borderWidth: 4,
+    borderColor: "red",
+    alignItems:"center",
+    justifyContent:"center"
+    // paddingVertical: 10,
+    // paddingHorizontal: 10,
+    // borderRadius:10,
+    // borderBottomRightRadius:10,
+    // margin: 20
+  },
+  box2: {
+    height: 80,
+    width: 80,
+    borderWidth: 4,
+    // alignSelf:"flex-end"
+    // margin: 20
+
+  },
+  flexContainer:{
+    display:"flex",
+    justifyContent:"center",
+    // alignItems:"center",
+
+  }
 
 
 
