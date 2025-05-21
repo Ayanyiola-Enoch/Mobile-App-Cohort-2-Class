@@ -1,16 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
 
 const index = () => {
   return (
     <View style={styles.page}>
 
-      <View style={styles.flexContainer}>
+      {/*} <View style={styles.flexContainer}>
         <View style={styles.box1}>
           <Text>App</Text>
         </View>
 
         <View style={styles.box2}></View>
+        <View style={styles.box2}></View>
+      </View>*/}
+      <View style={styles.flexContainer}>
+        <Image source={require('../assets/images/icon.png')} style={{ width: 100, height: 100 }} />
+
+        <View>
+
+          <Text>Name: <TextInput placeholder='Enter your name' style={{borderWidth:1, paddingLeft:10}}/>
+          </Text>
+
+          <Text>Phone number: <TextInput placeholder='Enter your number' keyboardType='number-pad' style={{borderWidth:1}}/></Text>
+
+          <Text>Password: <TextInput placeholder='Enter your password' keyboardType='visible-password' secureTextEntry={true} style={{borderWidth:1}}/></Text>
+
+
+        </View>
+
       </View>
 
     </View>
@@ -24,35 +41,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     flex: 1,
   },
-  subText: {
-    color: "#fff",
-    fontWeight: "200",
-  },
-  box1: {
-    height: 80,
-    width: 80,
-    borderWidth: 4,
-    borderColor: "red",
-    alignItems:"center",
-    justifyContent:"center"
-    // paddingVertical: 10,
-    // paddingHorizontal: 10,
-    // borderRadius:10,
-    // borderBottomRightRadius:10,
-    // margin: 20
-  },
-  box2: {
-    height: 80,
-    width: 80,
-    borderWidth: 4,
-    // alignSelf:"flex-end"
-    // margin: 20
 
-  },
-  flexContainer:{
-    display:"flex",
-    justifyContent:"center",
+  flexContainer: {
     // alignItems:"center",
+    justifyContent: "center",
+    marginTop:10,
+    paddingHorizontal:20
 
   }
 
